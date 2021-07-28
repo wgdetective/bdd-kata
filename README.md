@@ -114,19 +114,22 @@ We'll work on microservice that should recommend content based on user answers t
     "id": "P1",
     "name": "Product 1",
     "description": "Product 1 description",
-    "tag": "sport"
+    "tag": "sport",
+    "creationDate": "2021-07-25T12:44:10.1414619"
   },
   {
     "id": "P2",
     "name": "Product 2",
     "description": "Product 2 description",
-    "tag": "health"
+    "tag": "health",
+    "creationDate": "2021-07-25T12:44:10.1414619"
   },
   {
     "id": "P3",
     "name": "Product 3",
     "description": "Product 3 description",
-    "tag": "entertainment"
+    "tag": "entertainment",
+    "creationDate": "2021-07-25T12:44:10.1414619"
   }
 ]
 ```
@@ -141,34 +144,76 @@ We'll work on microservice that should recommend content based on user answers t
     "id": "S1",
     "name": "Service 1",
     "description": "Service 1 description",
-    "tag": "sport"
+    "durability" : "24h",
+    "tag": "sport",
+    "creationDate": "2021-07-25T12:44:10.1414619"
   },
   {
     "id": "S2",
     "name": "Service 2",
     "description": "Service 2 description",
-    "tag": "health"
+    "durability" : "24h",
+    "tag": "health",
+    "creationDate": "2021-07-25T12:44:10.1414619"
   },
   {
     "id": "S3",
     "name": "Service 3",
     "description": "Service 3 description",
-    "tag": "entertainment"
+    "durability" : "24h",
+    "tag": "entertainment",
+    "creationDate": "2021-07-25T12:44:10.1414619"
   }
 ]
 ```
 
 ### recommendation-microservice
 
-TODO
+`GET USER_ID=userId /v1/recommendations`
+
+```json
+[
+  {
+    "id": "P1",
+    "name": "Product 1",
+    "description": "Product 1 description",
+    "tag": "sport",
+    "creationDate": "2021-07-25T12:44:10.1414619",
+    "type" : "PRODUCT"
+  },
+  {
+    "id": "S1",
+    "name": "Service 1",
+    "description": "Service 1 description",
+    "durability" : "24h",
+    "tag": "sport",
+    "creationDate": "2021-07-24T12:44:10.1414619",
+    "type" : "SERVICE"
+  },
+  {
+    "id": "P2",
+    "name": "Product 2",
+    "description": "Product 2 description",
+    "tag": "health",
+    "creationDate": "2021-07-23T12:44:10.1414619",
+    "type" : "PRODUCT"
+  },
+  {
+    "id": "S2",
+    "name": "Service 2",
+    "description": "Service 2 description",
+    "durability" : "24h",
+    "tag": "health",
+    "creationDate": "2021-07-22T12:44:10.1414619",
+    "type" : "SERVICE"
+  }
+]
+```
 
 ## User stories
 
 ### 1. As a User I want to get list of recommended for me products and services.
-Recommendations should be based on user's survey answers.
 
-API should return 5 items max.
+API should return 3 items max.
 
-### 2. As a User I want to get list of recommended for me products and services sorted by view date.
-
-### 3. Uncovered bug. Stability.
+### 2. Uncovered bug. Stability.
