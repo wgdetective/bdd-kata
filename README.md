@@ -6,6 +6,8 @@ In the scope of this kata we'll go through implementation of 2 user stories and 
 
 We'll work on microservice that should recommend content based on user answers to survey.
 
+[microservices](./components.puml)
+
 ## Microservices
 
 ### survey-microservice
