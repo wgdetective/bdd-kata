@@ -80,7 +80,7 @@ We'll work on microservice that should recommend content based on user answers t
 }
 ```
 
-`GET /v1/user-answers`
+`GET AUTH=userId /v1/user-answers`
 
 ```json
 {
