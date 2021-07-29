@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+[recommendation-microservice] --> [survey-microservice]
+[recommendation-microservice] --> [content-service-microservice]
+[recommendation-microservice] --> [content-product-microservice]
+
+@enduml
