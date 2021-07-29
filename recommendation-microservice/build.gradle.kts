@@ -26,6 +26,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
+	implementation("commons-io:commons-io:2.6")
 //	testImplementation("org.springframework.security:spring-security-test")
 }
 
